@@ -1,0 +1,23 @@
+{
+  "name": "doveconviene",
+  "version": "1.0.0",
+  "description": "test frontend",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm-sass ./node_modules/bootstrap/scss/bootstrap.scss > bootstrap.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/45kb/doveconviene.git"
+  },
+  "author": "Filippo Oretti - <filippo.oretti@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/45kb/doveconviene/issues"
+  },
+  "homepage": "https://github.com/45kb/doveconviene#readme",
+  "dependencies": {
+    "bootstrap": "^4.1.2",
+    "jquery": "^3.3.1"
+  }
+}
