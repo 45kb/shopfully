@@ -1,7 +1,19 @@
 body {
   padding-top: 80px;
 }
-
+.navbar {
+  background-color: #6200ee;
+}
+.nav-button {
+  color: white;
+}
+.nav-button:hover {
+  color:white;
+  opacity: .8;
+}
+.navbar-brand {
+  float: left;
+}
 .card {
   float: left;
   width: 23%;
@@ -16,7 +28,7 @@ body {
 }
 
 /*IPHONE*/
-@media only screen and (min-width: 375px) and (max-width: 667px) {
+@media only screen and (min-width: 0) and (max-width: 667px) {
   .card {
     width: 48%;
   }
