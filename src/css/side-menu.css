@@ -1,0 +1,54 @@
+
+.side-overlay {
+  display:none;
+  position:fixed;
+  top:0;
+  left:0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: 9999;
+  background: rgba(0,0,0, .3); 
+}
+.side-overlay.show {
+  display: inherit;
+}
+.side-overlay.show .side-menu {
+  animation: sidemenuOpen .35s linear;
+}
+
+.side-menu {
+  width:80%;
+  min-height: 100%;
+  max-width: 350px;
+  height: 100vh;
+  box-shadow: 0 1px 200px rgba(0,0,0, .3);
+}
+.side-menu-img {
+  border-radius: 120px;
+  width: 120px;
+  height: 120px;
+  margin: 30px 0;
+}
+.side-menu-close-button i {
+  color: rgba(0,0,0, .3);
+  cursor: pointer;
+  float: right;
+  margin: 15px 20px;
+  font-size: 24px;
+}
+.side-menu-favourites {
+  margin-top: 20px;
+}
+.side-menu-favourites .list-group-item {
+  border: 0;
+  margin-top: 5px;
+  border-radius: 5px;
+  padding: .35rem 1.25rem;
+}
+.side-menu-favourites .list-group-item:hover {
+  background: rgba(0,0,0, .05);
+}
+.side-menu-favourites .list-group-item.active {
+  background: rgba(0,0,0, .05);
+  color: #007bff;
+}

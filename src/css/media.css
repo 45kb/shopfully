@@ -1,0 +1,13 @@
+/*IPAD*/
+@media only screen and (min-width: 768px) and (max-width: 1024px)  {
+  .card {
+    width: 23%;
+  }
+}
+
+/*IPHONE*/
+@media only screen and (min-width: 0) and (max-width: 667px) {
+  .card {
+    width: 48%;
+  }
+}
