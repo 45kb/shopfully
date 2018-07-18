@@ -12,9 +12,9 @@
 </head>
 <body>
   <!--Left Mobile Menu-->
-  <div class="side-overlay">
+  <div class="side-overlay" id="side-overlay">
     <div class="side-menu bg-white">
-      <a class="side-menu-close-button">
+      <a class="side-menu-close-button" id="side-menu-close-button">
         <i class="fa fa-chevron-left"></i>
       </a>
       <!--Start sidemenu header-->
@@ -159,7 +159,7 @@
   <!--Navbar-->
   <div class="navbar navbar-dark fixed-top">
     <div class="nav">
-      <a class="nav-link nav-button d-lg-none" href="#">
+      <a class="nav-link nav-button d-lg-none" href="#" id="navbar-button">
         <i class="nav-button-icon fa fa-bars"></i>
       </a>
       <a class="navbar-brand" href="/">
@@ -177,7 +177,7 @@
         <p>RETAILER NAME</p>
         <h4 class="card-title">Flyer Title</h4>
         <p class="card-text">Category name</p>
-        <a href="javascript:void(0)" onClick="saveFavourite(1111)"><i class="fa fa-heart fa-2x text-muted"></i></a>
+        <a href="javascript:void(0)" onClick="saveFavourite('1')"><i class="fa fa-heart fa-2x text-muted"></i></a>
       </div>
     </div>
 
@@ -187,7 +187,7 @@
         <p>RETAILER NAME</p>
         <h4 class="card-title">Flyer Title</h4>
         <p class="card-text">Category name</p>
-        <a href="javascript:void(0)" onClick="saveFavourite(2222)"><i class="fa fa-heart fa-2x text-muted"></i></a>
+        <a href="javascript:void(0)" onClick="saveFavourite('2')"><i class="fa fa-heart fa-2x text-muted"></i></a>
       </div>
     </div>
 
@@ -295,9 +295,9 @@
   <!--End of main-->
 
   <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-  <script src="node_modules/jquery/dist/jquery.min.js"></script>
   <!--Start all the custom JS -->
-  <script src="src/js/custom.min.js"></script>
+  <script src="src/js/favourites.js"></script>
+  <script src="src/js/layout.js"></script>
   <!--End all the custom JS -->
 </body>
 </html>

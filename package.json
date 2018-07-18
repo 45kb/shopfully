@@ -4,10 +4,9 @@
   "description": "test frontend",
   "main": "index.js",
   "scripts": {
-    "start": "npm run sass && npm run minify-css && npm run minify-js && python -m SimpleHTTPServer && echo `Please visiti http://localhost:8000`",
+    "start": "npm run sass && npm run minify-css && python -m SimpleHTTPServer && echo `Please visiti http://localhost:8000`",
     "sass": "npm-sass ./src/scss/index.scss > ./custom.css --map --min",
-    "minify-css": "minify ./custom.css",
-    "minify-js": "minify ./src/js/custom.js"
+    "minify-css": "minify ./custom.css"
   },
   "repository": {
     "type": "git",
@@ -22,7 +21,6 @@
   "dependencies": {
     "bootstrap": "^4.1.0",
     "font-awesome": "^4.7.0",
-    "jquery": "^3.3.1",
     "roboto-fontface": "^0.9.0"
   },
   "devDependencies": {
