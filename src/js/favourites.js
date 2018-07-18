@@ -24,6 +24,7 @@ var favouritesWrapper = document.getElementById('favourites-list')
   if (indexOf > -1) {
     favourites.splice(indexOf, 1);
   }
+
   localStorage.setItem('favourites', JSON.stringify(favourites));
   console.info('Deleted in favourites', favourites);
 }
@@ -32,10 +33,13 @@ var favouritesWrapper = document.getElementById('favourites-list')
 
   //create element in wrapper list
   for (var i = 0; i < favourites.length; i += 1) {
-    html += "<a  onclick='deleteFavourite(" + favourites[i] + "); generateFavouritePinsList();' href='#' class='list-group-item text-muted'>" +
-    "<i class='fa fa-heart'></i>&nbsp;&nbsp;Flyer number " + favourites[i] + "</a>";
+    html += "<a href='#' class='list-group-item text-muted favourite-button' onclick='deleteFavourite(" + favourites[i] + "); generateFavouritePinsList();'>"
+     + "<i class='fa fa-heart'></i>&nbsp;&nbsp;Flyer number " + favourites[i] + "</a>";
   }
 
+  if (!html) {
+    html = "You have 0 favourite flyers.";
+  }
   favouritesWrapper.innerHTML = html;
 
   console.info('Updated list of favourites');

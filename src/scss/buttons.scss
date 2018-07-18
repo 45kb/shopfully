@@ -1,0 +1,10 @@
+.favourite-button {
+  i {
+    color: $color-muted;
+  }
+  &.active {
+    i {
+      color: red;
+    }
+  }
+}
