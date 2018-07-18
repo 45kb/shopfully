@@ -11,6 +11,9 @@ body {
   color:white;
   opacity: .8;
 }
+.nav-button-icon {
+  font-size: 24px;
+}
 .navbar-brand {
   float: left;
 }
