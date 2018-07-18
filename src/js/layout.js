@@ -9,7 +9,7 @@ var sideOverlay = document.getElementById('side-overlay')
       sideOverlay.classList.toggle('show');
     };
 
-    sideMenuClosebutton.onclick =  function () {
+    sideMenuClosebutton.onclick = function () {
       sideOverlay.classList.remove('show');
     };
   };
