@@ -3,6 +3,12 @@
   "version": "1.0.0",
   "description": "test frontend",
   "main": "index.js",
+  "scripts": {
+    "start": "npm run sass && npm run minify-css && python -m SimpleHTTPServer && echo `Please visiti http://localhost:8000`",
+    "sass": "npm-sass ./src/scss/index.scss > ./custom.css --map --min",
+    "minify-css": "minify ./custom.css && rm -Rf ./custom.css",
+    "minify-js": "minify ./src/js/custom.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/45kb/doveconviene.git"
@@ -21,6 +27,6 @@
     "roboto-fontface": "^0.9.0"
   },
   "devDependencies": {
-    "npm-run-parallel": "^0.6.0"
+    "npm-sass": "^2.3.0"
   }
 }
