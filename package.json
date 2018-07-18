@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run sass && npm run minify-css && python -m SimpleHTTPServer && echo `Please visiti http://localhost:8000`",
-    "sass": "npm-sass ./src/scss/index.scss > ./custom.css --map --min",
+    "sass": "npm-sass ./src/scss/index.scss > ./custom.css",
     "minify-css": "minify ./custom.css"
   },
   "repository": {
@@ -26,6 +26,5 @@
   "devDependencies": {
     "minifier": "^0.8.1",
     "npm-sass": "^2.3.0"
-  },
-  "false": {}
+  }
 }
