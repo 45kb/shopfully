@@ -1,5 +1,9 @@
 .favourite-button {
   i {
+    &:active {
+      transition: all .12s ease-out;
+      transform: scale(.8);
+    }
     color: $color-muted;
   }
   &.active {
