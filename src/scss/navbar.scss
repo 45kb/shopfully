@@ -1,19 +1,24 @@
 .navbar {
-  background: #6200ee;
-}
-.nav-button {
-  color: white;
-}
-.nav-button:hover {
-  color:white;
-  text-shadow: 0 -1px -1px black;
-}
-.nav-button:active, .nav-button:focus {
-  color: rgba(0,0,0, .1);
-}
-.nav-button-icon {
-  font-size: 24px;
-}
-.navbar-brand {
-  float: left;
+  background: $color-purple;
+  
+  .nav-button {
+    color: white;
+
+    &:hover {
+      color:white;
+      text-shadow: 0 -1px -1px black;
+    }
+
+    &:active, &:focus {
+      color: $color-muted-less;
+    }
+  }
+
+  .nav-button-icon {
+    font-size: 24px;
+  }
+
+  .navbar-brand {
+    float: left;
+  }
 }
