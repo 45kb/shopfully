@@ -2,4 +2,3 @@ node_modules/
 .DS_Store
 custom.css
 custom.min.css
-src/js/*.min.js
