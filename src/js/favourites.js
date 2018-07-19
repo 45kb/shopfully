@@ -2,7 +2,7 @@
 //Favaourites
 var favouritesWrapper = document.getElementById('favourites-list')
 , favourites = JSON.parse(localStorage.getItem('favourites'))
-, activateFavouriteButtons = function () {
+, updateFavouriteButtons = function () {
   //get all the buttons for favourites
   var buttons = document.getElementsByClassName('favourite-button');
   //lopp them and see if their id="" value is present in favourites list
@@ -14,6 +14,8 @@ var favouritesWrapper = document.getElementById('favourites-list')
     //if the ID is present in favourites list -> add the .active class to the current button
     if (favourites && favourites.indexOf(buttonID) > -1) {
       thisButton.classList.add('active');
+    } else {
+      thisButton.classList.remove('active');
     }
   }
 }
@@ -42,6 +44,7 @@ var favouritesWrapper = document.getElementById('favourites-list')
 
   localStorage.setItem('favourites', JSON.stringify(favourites));
   console.info('Deleted from favourites', favourites);
+  updateFavouriteButtons();
 }
 , generateFavouritePinsList = function () {
   var html
@@ -64,7 +67,7 @@ var favouritesWrapper = document.getElementById('favourites-list')
   console.info('Updated list of favourites');
 };
 
-//Init favourite pinned flyers
+//Init favourite pinned flyers on page load
 generateFavouritePinsList();
-//Activate buttons for pinned flyers
-activateFavouriteButtons();
+//Activate or deactivate buttons for pinned flyers on page load
+updateFavouriteButtons();
