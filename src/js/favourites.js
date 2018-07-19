@@ -2,12 +2,27 @@
 //Favaourites
 var favouritesWrapper = document.getElementById('favourites-list')
 , favourites = JSON.parse(localStorage.getItem('favourites'))
+, activateFavouriteButtons = function () {
+  //get all the buttons for favourites
+  var buttons = document.getElementsByClassName('favourite-button');
+  //lopp them and see if their id="" value is present in favourites list
+  for (var i = 0; i < buttons.length; i += 1) {
+
+    var buttonID = buttons[i].id
+      , thisButton = buttons[i];
+
+    //if the ID is present in favourites list -> add the .active class to the current button
+    if (favourites && favourites.indexOf(buttonID) > -1) {
+      thisButton.classList.add('active');
+    }
+  }
+}
 , saveFavourite = function (identifier) {
   var id = identifier.toString();
   //if not saved save it
   if (favourites.indexOf(id) < 0) {
     favourites.push(id);
-    localStorage.setItem('favourites', JSON.stringify(favourites));
+    localStorage.setItem('favourites', JSON.stringify(favourites.sort()));
 
   } else {
     deleteFavourite(identifier);
@@ -26,10 +41,10 @@ var favouritesWrapper = document.getElementById('favourites-list')
   }
 
   localStorage.setItem('favourites', JSON.stringify(favourites));
-  console.info('Deleted in favourites', favourites);
+  console.info('Deleted from favourites', favourites);
 }
 , generateFavouritePinsList = function () {
-  var html = "";
+  var html;
 
   //create element in wrapper list
   for (var i = 0; i < favourites.length; i += 1) {
@@ -47,3 +62,5 @@ var favouritesWrapper = document.getElementById('favourites-list')
 
 //Init favourite pinned flyers
 generateFavouritePinsList();
+//Activate buttons for pinned flyers
+activateFavouriteButtons();
