@@ -1,13 +1,17 @@
 # Installation
 
-npm i
+Please run this command in your terminal:
 
-# Start
+> npm i
 
-npm start
+# Start server
+
+Please run this command in your terminal:
+
+> npm start
 
 # Browse
 
-Open this link in the browser
+Open this link in your browser
 
 http://localhost:8000
