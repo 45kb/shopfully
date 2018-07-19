@@ -1,12 +1,13 @@
 {
   "name": "doveconviene",
   "version": "1.0.0",
-  "description": "test frontend",
+  "description": "Assignment for Shopfully",
   "main": "index.js",
   "scripts": {
-    "start": "npm run sass && npm run minify-css && python -m SimpleHTTPServer && echo `Please visiti http://localhost:8000`",
+    "start": "npm run sass && npm run minify-css && npm run minify-js && python -m SimpleHTTPServer && echo Please open this url in your browser: http://localhost:8000",
     "sass": "npm-sass ./src/scss/index.scss > ./custom.css",
-    "minify-css": "minify ./custom.css"
+    "minify-css": "minify ./custom.css",
+    "minify-js": "minify ./src/js/*"
   },
   "repository": {
     "type": "git",
