@@ -48,7 +48,7 @@ var favouritesWrapper = document.getElementById('favourites-list')
   updateFavouriteButtons();
 }
 , generateFavouritePinsList = function () {
-  var html
+  var html = ""
     , fav = favourites
     , sortedFavourites = fav.sort((a, b) => Number(b) - Number(a));
 
