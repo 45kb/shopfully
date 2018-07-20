@@ -1,4 +1,5 @@
 'use strict'
+//jscs:disable
 //Favaourites
 var favouritesWrapper = document.getElementById('favourites-list')
 , favourites = JSON.parse(localStorage.getItem('favourites'))
@@ -53,13 +54,13 @@ var favouritesWrapper = document.getElementById('favourites-list')
 
   //create element in wrapper list
   for (var i = 0; i < sortedFavourites.length; i += 1) {
-    html += "<a href='#' class='list-group-item text-muted favourite-button' onclick='deleteFavourite(" + sortedFavourites[i] + "); generateFavouritePinsList();'>"
+    html += "<a href='javascript:void(0)' class='list-group-item text-muted favourite-button' onclick='deleteFavourite(" + sortedFavourites[i] + "); generateFavouritePinsList();'>"
      + "<i class='fa fa-heart'></i>&nbsp;&nbsp;Flyer number " + sortedFavourites[i] + "</a>";
   }
 
   if (!html) {
     //there are no favourites in this case
-    html = "You have 0 favourite flyers.";
+    html = 'You have 0 favourite flyers.';
   }
 
   favouritesWrapper.innerHTML = html;

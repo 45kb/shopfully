@@ -1,4 +1,5 @@
 'use strict'
+//jscs:disable
 //Layout
 var sideOverlay = document.getElementById('side-overlay')
   , sideMenuClosebutton = document.getElementById('side-menu-close-button')
