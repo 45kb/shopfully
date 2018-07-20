@@ -16,4 +16,4 @@ Open this link in your browser
 
 http://localhost:8080
 
-_if any error in console please visit http://localhost:8000 instead
+<i>if any error please visit http://localhost:8000 instead</i>
