@@ -1,6 +1,6 @@
 .navbar {
   background: $color-purple;
-  
+
   .nav-button {
     color: white;
 
@@ -10,7 +10,7 @@
     }
 
     &:active, &:focus {
-      color: $color-muted-less;
+      transform: scale(.9);
     }
   }
 
